@@ -42,7 +42,7 @@ public class HowToCreateThread {
             @Override
             public Object call() throws Exception {
                 System.out.println(Thread.currentThread().getName() +" Started");
-                return "invoke finished";
+                return "execute finished";
             }
         }
 
