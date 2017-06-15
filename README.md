@@ -22,14 +22,13 @@
     - [ ] 浅析Java并发编程（五）CAS&Unsafe]
 
 - 浅析设计模式系列
+    - [x] [设计模式六大原则（面向对象语言）]()
     - [ ] 浅析设计模式 - 简单工厂模式（Simple Factory）
     - [ ] 浅析设计模式 - 工厂方法模式（Factory Method）
     - [ ] 浅析设计模式 - 抽象工厂模式（Abstract Factory）
     - [ ] 浅析设计模式 - 创建者模式（Builder）
     - [ ] 浅析设计模式 - 原型模式（Prototype）
     - [ ] 浅析设计模式 - 单例模式（Singleton）
-
-
 
     - [ ] 浅析设计模式 - 外观模式（Facade）
     - [ ] 浅析设计模式 - 适配器模式（Adapter）
@@ -38,8 +37,6 @@
     - [ ] 浅析设计模式 - 桥模式（Bridge）
     - [ ] 浅析设计模式 - 组合模式（Composite）
     - [ ] 浅析设计模式 - 享元模式（Flyweight）
-
-
 
     - [ ] 浅析设计模式 - 模板方法模式（Template Method）
     - [ ] 浅析设计模式 - 观察者模式（Observer）
