@@ -12,11 +12,11 @@
 - 浅析JVM系列
     - [x] [浅析JVM（一）Class文件&类加载机制](http://www.jianshu.com/p/5f3278916b38)
     - [x] [浅析JVM（二）运行时数据区](http://www.jianshu.com/p/460aeab77b7f)
-    - [x] [浅析JVM（三） GC]()
+    - [x] [浅析JVM（三）GC](http://www.jianshu.com/p/bf41e3425e64)
 
 - 浅析Java并发编程系列
-    - [x] [浅析Java并发编程（一）基础概念&理论]()
-    - [x] [浅析Java并发编程（二）synchronized & volatile]()
+    - [x] [浅析Java并发编程（一）基础概念&理论](http://www.jianshu.com/p/f4cdcc90290a)
+    - [x] [浅析Java并发编程（二）synchronized & volatile](http://www.jianshu.com/p/7713f95b1a67)
     - [ ] 浅析Java并发编程（三）线程间的协作]
     - [ ] 浅析Java并发编程（四）java.util.concurrent]
     - [ ] 浅析Java并发编程（五）CAS&Unsafe]
