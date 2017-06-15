@@ -14,6 +14,8 @@
         <module>jvm</module>
         <module>container</module>
         <module>concurrent</module>
+        <module>data-structure</module>
+        <module>arithmetic</module>
     </modules>
 
 
