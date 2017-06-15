@@ -8,8 +8,8 @@
     - [浅析JVM（二）运行时数据区]()
     - [浅析JVM（三） GC]()
 - 浅析Java并发编程系列
-    - [浅析Java并发编程（一）基础概念&理论]()
-    - [浅析Java并发编程（二）synchronized & volatile]()
+    - [x][浅析Java并发编程（一）基础概念&理论]()
+    - [ ][浅析Java并发编程（二）synchronized & volatile]()
     - [浅析Java并发编程（三）线程间的协作]()
     - [浅析Java并发编程（四）java.util.concurrent]()
     - [浅析Java并发编程（五）CAS&Unsafe]()
