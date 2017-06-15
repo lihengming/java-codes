@@ -15,9 +15,33 @@
     - [ ] [浅析Java并发编程（四）java.util.concurrent]()
     - [ ] [浅析Java并发编程（五）CAS&Unsafe]()
 
-- [ ] 浅析设计模式系列
+- 浅析设计模式系列
+    - [ ] 浅析设计模式 - 简单工厂模式（Simple Factory）
+    - [ ] 浅析设计模式 - 工厂方法模式（Factory Method）
+    - [ ] 浅析设计模式 - 抽象工厂模式（Abstract Factory）
+    - [ ] 浅析设计模式 - 创建者模式（Builder）
+    - [ ] 浅析设计模式 - 原型模式（Prototype）
+    - [ ] 浅析设计模式 - 单例模式（Singleton）
 
+    - [ ] 浅析设计模式 - 外观模式（Facade）
+    - [ ] 浅析设计模式 - 适配器模式（Adapter）
+    - [ ] 浅析设计模式 - 代理模式（Proxy）
+    - [ ] 浅析设计模式 - 装饰模式（Decorator）
+    - [ ] 浅析设计模式 - 桥模式（Bridge）
+    - [ ] 浅析设计模式 - 组合模式（Composite）
+    - [ ] 浅析设计模式 - 享元模式（Flyweight）
 
+    - [ ] 浅析设计模式 - 模板方法模式（Template Method）
+    - [ ] 浅析设计模式 - 观察者模式（Observer）
+    - [ ] 浅析设计模式 - 状态模式（State）
+    - [ ] 浅析设计模式 - 策略模式（Strategy）
+    - [ ] 浅析设计模式 - 职责链模式（Chain of Responsibility）
+    - [ ] 浅析设计模式 - 命令模式（Command）
+    - [ ] 浅析设计模式 - 访问者模式（Visitor）
+    - [ ] 浅析设计模式 - 调停者模式（Mediator）
+    - [ ] 浅析设计模式 - 备忘录模式（Memento）
+    - [ ] 浅析设计模式 - 迭代器模式（Iterator）
+    - [ ] 浅析设计模式 - 解释器模式（Interpreter）
 ### 关于
 - 本项目的两大作用
     1. 温故基础、收集优秀代码。
