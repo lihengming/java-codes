@@ -13,46 +13,51 @@ public class HowToCreateThread {
         method3();
     }
 
-    //继承java.lang.Thread
-   public static void method1(){
-       class Task extends Thread{
+    public static void method1() {
+        //继承java.lang.Thread
+        class Task extends Thread {
 
-           @Override
-           public void run() {
-               System.out.println(Thread.currentThread().getName() +" Started");
-           }
-       }
+            @Override
+            public void run() {
+                System.out.println(Thread.currentThread().getName() + " Started");
+            }
+        }
 
-       new Task().start();
-   }
-    //实现 java.lang.Runnable
-   public static void method2(){
-       class Task implements Runnable {
+        new Task().start();
+    }
 
-           @Override
-           public void run() {
-               System.out.println(Thread.currentThread().getName() +" Started");
-           }
-       }
+    public static void method2() {
+        //实现 java.lang.Runnable
+        class Task implements Runnable {
 
-       new Thread(new Task()).start();
-   }
-    //实现 java.util.concurrent.Callable
-    public static void method3(){
-        class Task implements Callable{
+            @Override
+            public void run() {
+                System.out.println(Thread.currentThread().getName() + " Started");
+            }
+        }
+
+        new Thread(new Task()).start();
+    }
+
+    public static void method3() {
+        //实现 java.util.concurrent.Callable
+        class Task implements Callable {
 
             @Override
             public Object call() throws Exception {
-                System.out.println(Thread.currentThread().getName() +" Started");
-                return "execute finished";
+                System.out.println(Thread.currentThread().getName() + " Started");
+                //求和
+                return 1 + 1;
             }
         }
 
         ExecutorService es = Executors.newFixedThreadPool(1);
         Future future = es.submit(new Task());
         try {
-            System.out.println(future.get());
-        } catch (InterruptedException|ExecutionException e) { e.printStackTrace();}
+            System.out.println("Calculate Completed Sum：" + future.get());
+        } catch (InterruptedException | ExecutionException e) {
+            e.printStackTrace();
+        }
 
         es.shutdown();
 
