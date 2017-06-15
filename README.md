@@ -22,7 +22,6 @@
     - [ ] 浅析Java并发编程（五）CAS&Unsafe]
 
 - 浅析设计模式系列
-    - [x] [设计模式六大原则（面向对象语言）]()
     - [ ] 浅析设计模式 - 简单工厂模式（Simple Factory）
     - [ ] 浅析设计模式 - 工厂方法模式（Factory Method）
     - [ ] 浅析设计模式 - 抽象工厂模式（Abstract Factory）
