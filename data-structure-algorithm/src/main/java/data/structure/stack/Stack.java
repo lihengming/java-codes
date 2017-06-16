@@ -1,4 +1,4 @@
-package stack;
+package data.structure.stack;
 
 /**
  * Created by 李恒名 on 2017/6/8.

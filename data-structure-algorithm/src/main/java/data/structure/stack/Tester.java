@@ -1,4 +1,4 @@
-package stack;
+package data.structure.stack;
 
 import org.junit.Test;
 
