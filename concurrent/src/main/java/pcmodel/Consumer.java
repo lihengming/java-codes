@@ -26,10 +26,9 @@ public class Consumer implements Runnable {
                     }
                 }
                 System.out.println("消费者[" + Thread.currentThread().getName() + "]消费了一个产品：" + buffer.remove(0));
-                buffer.notifyAll();
+                buffer.notifyAll();//消费完毕通知等待池内的其他线程(生产者或消费者都有可能)
             }
         }
     }
-
 
 }

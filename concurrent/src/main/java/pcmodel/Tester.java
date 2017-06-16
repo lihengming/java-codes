@@ -18,10 +18,10 @@ public class Tester {
     public static void test1(){
         List<Product> buffer = new LinkedList<Product>();
         ExecutorService es = Executors.newFixedThreadPool(5);
-        //两个消费者
+        //两个生产者
         es.execute(new Producer(buffer));
         es.execute(new Producer(buffer));
-        //三个生产者
+        //三个消费者
         Consumer consumer = new Consumer(buffer);
         es.execute(new Consumer(buffer));
         es.execute(new Consumer(buffer));
@@ -34,10 +34,10 @@ public class Tester {
     public static void test2(){
         BlockingQueue<Product> buffer = new LinkedBlockingQueue<Product>(10);
         ExecutorService es = Executors.newFixedThreadPool(5);
-        //两个消费者
+        //两个生产者
         es.execute(new ProducerBlockedQueueImpl(buffer));
         es.execute(new ProducerBlockedQueueImpl(buffer));
-        //三个生产者
+        //三个消费者
         es.execute(new ConsumerBlockedQueueImpl(buffer));
         es.execute(new ConsumerBlockedQueueImpl(buffer));
         es.execute(new ConsumerBlockedQueueImpl(buffer));

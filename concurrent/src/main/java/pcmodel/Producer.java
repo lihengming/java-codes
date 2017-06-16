@@ -37,7 +37,7 @@ public class Producer implements Runnable {
                 Product product = new Product("iPhone 手机");
                 buffer.add(product);
                 System.out.println("生产者[" + Thread.currentThread().getName() + "]生产了一个产品：" + product);
-                buffer.notifyAll();//生产完毕通知等待锁的其他线程(生产者或消费者都有可能)
+                buffer.notifyAll();//生产完毕通知等待池内的其他线程(生产者或消费者都有可能)
             }
         }
     }
