@@ -28,6 +28,21 @@ public class Tester {
         es.execute(new Consumer(buffer));
 
         es.shutdown();
+        /**
+         输出：
+         ...
+         生产者[pool-1-thread-2]生产了一个产品：iPhone 手机
+         生产者[pool-1-thread-2]生产了一个产品：iPhone 手机
+         消费者[pool-1-thread-5]消费了一个产品：iPhone 手机
+         消费者[pool-1-thread-5]消费了一个产品：iPhone 手机
+         消费者[pool-1-thread-5]消费了一个产品：iPhone 手机
+         消费者[pool-1-thread-5]消费了一个产品：iPhone 手机
+         消费者[pool-1-thread-5]消费了一个产品：iPhone 手机
+         生产者[pool-1-thread-1]生产了一个产品：iPhone 手机
+         消费者[pool-1-thread-4]消费了一个产品：iPhone 手机
+         生产者[pool-1-thread-2]生产了一个产品：iPhone 手机
+         ...
+         */
 
     }
     //测试blocked queue实现
