@@ -14,12 +14,12 @@ public class SynchronizedMethodTest {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-        System.out.println(this + " method1() execute!");
+        System.out.println("method1() execute!");
 
     }
 
     public /*synchronized*/ void method2() {
-        System.out.println(this + " method2() execute!");
+        System.out.println("method2() execute!");
     }
 
     public static void main(String[] args) {
