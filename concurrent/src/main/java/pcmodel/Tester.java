@@ -58,5 +58,19 @@ public class Tester {
         es.execute(new ConsumerBlockedQueueImpl(buffer));
 
         es.shutdown();
+
+        /**
+         输出：
+         ...
+         生产者[pool-1-thread-1]生产了一个产品：MAC
+         消费者[pool-1-thread-3]消费了一个产品：MAC
+         消费者[pool-1-thread-4]消费了一个产品：MAC
+         消费者[pool-1-thread-4]消费了一个产品：MAC
+         消费者[pool-1-thread-4]消费了一个产品：MAC
+         生产者[pool-1-thread-2]生产了一个产品：MAC
+         生产者[pool-1-thread-2]生产了一个产品：MAC
+         生产者[pool-1-thread-2]生产了一个产品：MAC
+         ...
+         */
     }
 }
