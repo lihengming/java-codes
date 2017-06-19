@@ -20,6 +20,12 @@ public class ExecutorTest {
         }
         //关键线程池
         es.shutdown();
+        /**
+         输出：
+         pool-1-thread-1 Started By Runnable
+         pool-1-thread-2 Started By Callable
+         Calculate Completed Sum：2
+         */
     }
 }
 class CallableTask implements Callable {
