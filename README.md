@@ -20,7 +20,7 @@
     - [x] [浅析Java并发编程（一）基础概念&理论](http://www.jianshu.com/p/f4cdcc90290a)
     - [x] [浅析Java并发编程（二）synchronized & volatile](http://www.jianshu.com/p/7713f95b1a67)
     - [x] [浅析Java并发编程（三）线程的状态&协作](http://www.jianshu.com/p/7cc1c01f7655)
-    - [ ] 浅析Java并发编程（四）java.util.concurrent
+    - [x] [浅析Java并发编程（四）java.util.concurrent](http://www.jianshu.com/p/47ff843bcfe7)
     - [ ] 浅析Java并发编程（五）CAS&Unsafe
 
 - 浅析设计模式系列
