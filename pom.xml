@@ -16,6 +16,7 @@
         <module>concurrent</module>
         <module>data-structure-algorithm</module>
         <module>codemarks</module>
+        <module>design-pattern</module>
     </modules>
 
 
