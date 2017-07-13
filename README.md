@@ -7,9 +7,7 @@
   2. 存放[我的技术博客](http://www.jianshu.com/u/335a31051c58)上相关文章包含的代码。
 - 本项目基于```Java 8```，构建工具为```Maven```，部分测试代码使用```Junit```运行。
 
------------
-
-### 目录
+### 项目目录
 - [数据结构 & 算法](https://github.com/lihengming/java-codes/tree/master/data-structure-algorithm)
     - [常见排序算法](https://github.com/lihengming/java-codes/tree/master/data-structure-algorithm/src/main/java/arithmetic)
     - [基础数据结构](https://github.com/lihengming/java-codes/tree/master/data-structure-algorithm/src/main/java/data/structure)
@@ -53,6 +51,7 @@
         - 迭代器模式（Iterator）
         - 解释器模式（Interpreter）
 - [资源分享](https://github.com/lihengming/java-codes/tree/master/shared-resources) 
+- [代码收藏夹](https://github.com/lihengming/java-codes/tree/master/codemarks) 
 
 ### 相关文章
 
