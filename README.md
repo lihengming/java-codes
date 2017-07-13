@@ -1,12 +1,6 @@
 ### 温故而知新
 > “温故而知新”有三解。一为“温故才知新”：温习已学的知识，并且由其中获得新的领悟；二为“温故及知新”：一方面要温习典章故事，另一方面又努力撷取新的知识。三为，温故，知新。随着自己阅历的丰富和理解能力的提高，回头再看以前看过的知识，总能从中体会到更多的东西。
 
-### 关于
-- 本项目的两大作用
-  1. 温故基础、收藏可复用代码、分享资源。
-  2. 存放[我的技术博客](http://www.jianshu.com/u/335a31051c58)上相关文章包含的代码。
-- 本项目基于```Java 8```，构建工具为```Maven```，部分测试代码使用```Junit```运行。
-
 ### 项目目录
 - [数据结构 & 算法](https://github.com/lihengming/java-codes/tree/master/data-structure-algorithm)
     - [常见排序算法](https://github.com/lihengming/java-codes/tree/master/data-structure-algorithm/src/main/java/arithmetic)
@@ -67,3 +61,8 @@
     - [x] [浅析Java并发编程（四）java.util.concurrent](http://www.jianshu.com/p/47ff843bcfe7)
     - [x] [浅析Java并发编程（五）CAS&Unsafe&AQS的“秘密”](http://www.jianshu.com/p/54cc20a87502)
       
+### 关于
+- 本项目的两大作用
+  1. 温故基础、收藏可复用代码、分享资源。
+  2. 存放[我的技术博客](http://www.jianshu.com/u/335a31051c58)上相关文章包含的代码。
+- 本项目基于```Java 8```，构建工具为```Maven```，部分测试代码使用```Junit```运行，内容持续更新。
