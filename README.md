@@ -23,7 +23,7 @@
         - 抽象工厂模式（Abstract Factory）
         - 创建者模式（Builder）
         - 原型模式（Prototype）
-        - 单例模式（Singleton）
+        - [单例模式（Singleton）](https://github.com/lihengming/java-codes/blob/master/design-pattern/src/main/java/creational/SingletonPattern.java)
     - [结构型模式（Structural）](https://github.com/lihengming/java-codes/tree/master/design-pattern/src/main/java/structural)    
         - 外观模式（Facade）
         - 适配器模式（Adapter）
