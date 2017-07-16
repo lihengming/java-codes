@@ -30,14 +30,14 @@ public class FactoryMethodPattern {
     static abstract class CarFactory {
         public abstract Car getCar();
     }
-    //奔驰汽车工厂，getCar()方法可以修改为静态方法
+    //奔驰汽车工厂
     static class BenzFactory extends CarFactory {
         @Override
         public Car getCar() {
             return new Benz();
         }
     }
-    //宝马汽车工厂，getCar()方法可以修改为静态方法
+    //宝马汽车工厂
     static class BMWFactory extends CarFactory {
         @Override
         public Car getCar() {
