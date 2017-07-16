@@ -20,7 +20,7 @@
     - [创建型模式（Creational）](https://github.com/lihengming/java-codes/tree/master/design-pattern/src/main/java/creational)
         - [简单工厂模式（Simple Factory）](https://github.com/lihengming/java-codes/blob/master/design-pattern/src/main/java/creational/SimpleFactoryPattern.java)
         - [工厂方法模式（Factory Method）](https://github.com/lihengming/java-codes/blob/master/design-pattern/src/main/java/creational/FactoryMethodPattern.java)
-        - [抽象工厂模式（Abstract Factory）](https://github.com/lihengming/java-codes/blob/master/design-pattern/src/main/java/creational/AbstractFactoryPatternjava)
+        - [抽象工厂模式（Abstract Factory）](https://github.com/lihengming/java-codes/blob/master/design-pattern/src/main/java/creational/AbstractFactoryPattern.java)
         - [静态工厂方法模式（Static Factory Method）](https://github.com/lihengming/java-codes/blob/master/design-pattern/src/main/java/creational/StaticFactoryMethodPattern.java)
         - [创建者模式（Builder）](https://github.com/lihengming/java-codes/blob/master/design-pattern/src/main/java/creational/BuilderPattern.java)
         - [原型模式（Prototype）](https://github.com/lihengming/java-codes/blob/master/design-pattern/src/main/java/creational/PrototypePattern.java)
