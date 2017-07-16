@@ -6,18 +6,11 @@ package creational;
  * 工厂方法模式
  */
 public class FactoryMethodPattern {
-
-    public static void main(String[] args) {
-        CarFactory factory = new BenzFactory();
-        //CarFactory factory = new BMWFactory();
-        Car car = factory.getCar();
-        car.run();
-    }
-
+    //汽车抽象
     static abstract class Car {
         abstract void run();
     }
-
+    //奔驰汽车
     static class Benz extends Car {
 
         @Override
@@ -25,7 +18,7 @@ public class FactoryMethodPattern {
             System.out.println("奔驰车在跑");
         }
     }
-
+    //宝马汽车
     static class BMW extends Car {
 
         @Override
@@ -33,23 +26,29 @@ public class FactoryMethodPattern {
             System.out.println("宝马车在跑");
         }
     }
-
+    //抽象的汽车工厂
     static abstract class CarFactory {
-        abstract Car getCar();
+        public abstract Car getCar();
     }
-
+    //奔驰汽车工厂，getCar()方法可以修改为静态方法
     static class BenzFactory extends CarFactory {
         @Override
-        Car getCar() {
+        public Car getCar() {
             return new Benz();
         }
     }
-
+    //宝马汽车工厂，getCar()方法可以修改为静态方法
     static class BMWFactory extends CarFactory {
         @Override
-        Car getCar() {
+        public Car getCar() {
             return new BMW();
         }
+    }
+    public static void main(String[] args) {
+        CarFactory factory = new BenzFactory();
+        //CarFactory factory = new BMWFactory();
+        Car car = factory.getCar();
+        car.run();
     }
 }
 
