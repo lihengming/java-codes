@@ -7,7 +7,7 @@ import java.util.Objects;
 /**
  * Created by 李恒名 on 2017/7/15.
  * <p>
- * 单例模式，即只允许存在一个类的实例
+ * 单例模式，即一个类只允许存在一个实例。
  *
  * @see java.lang.Runtime#getRuntime()
  */
