@@ -3,7 +3,7 @@ package creational;
 /**
  * Created by 李恒名 on 2017/6/14.
  * <p>
- * 简单工厂模式
+ * 简单工厂模式，简单来说就是由一个工厂类根据传入的参数，动态决定应该创建哪一个产品类（该模式并不属于GOF 23）
  */
 public class SimpleFactoryPattern {
     //汽车抽象
@@ -12,7 +12,6 @@ public class SimpleFactoryPattern {
     }
     //奔驰汽车
     static class Benz extends Car {
-
         @Override
         void run() {
             System.out.println("奔驰车在跑");
@@ -20,7 +19,6 @@ public class SimpleFactoryPattern {
     }
     //宝马汽车
     static class BMW extends Car {
-
         @Override
         void run() {
             System.out.println("宝马车在跑");
