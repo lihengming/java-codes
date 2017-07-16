@@ -86,7 +86,6 @@ public class SingletonPattern {
         }
     }
 
-
     /**
      * 使用静态内部类 static nested class ,这种方法是《Effective Java》上所推荐的
      */
