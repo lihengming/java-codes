@@ -26,7 +26,7 @@
         - [原型模式（Prototype）](https://github.com/lihengming/java-codes/blob/master/design-pattern/src/main/java/creational/PrototypePattern.java)
         - [单例模式（Singleton）](https://github.com/lihengming/java-codes/blob/master/design-pattern/src/main/java/creational/SingletonPattern.java)
     - [结构型模式（Structural）](https://github.com/lihengming/java-codes/tree/master/design-pattern/src/main/java/structural)    
-        - 外观模式（Facade）
+        - [外观（门面）模式（Facade）](https://github.com/lihengming/java-codes/blob/master/design-pattern/src/main/java/creational/FacadePattern.java)
         - 适配器模式（Adapter）
         - 代理模式（Proxy）
         - 装饰模式（Decorator）
