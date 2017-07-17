@@ -7,7 +7,7 @@ package structural;
  */
 public class FacadePattern {
 
-    //系统门面，为多复杂子系统提供访问入口
+    //系统门面
     static class SystemFacade {
         void start() {
             new SubSystemA().start();
