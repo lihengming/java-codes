@@ -28,7 +28,7 @@
     - [结构型模式（Structural）](https://github.com/lihengming/java-codes/tree/master/design-pattern/src/main/java/structural)    
         - [外观（门面）模式（Facade）](https://github.com/lihengming/java-codes/blob/master/design-pattern/src/main/java/structural/FacadePattern.java)
         - 适配器模式（Adapter）
-        - 代理模式（Proxy）
+        - [代理模式（Proxy）](https://github.com/lihengming/java-codes/blob/master/design-pattern/src/main/java/structural/ProxyPattern.java)
         - 装饰模式（Decorator）
         - 桥模式（Bridge）
         - 组合模式（Composite）
