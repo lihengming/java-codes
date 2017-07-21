@@ -1,9 +1,14 @@
 package structural;
 
+import java.lang.reflect.Proxy;
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Created by 李恒名 on 2017/7/19.
  * <p>
  * 代理模式，为目标对象创建一个代理对象，其他对象可以通过代理对象来访问目标对象的方法，AOP、拦截器均为该模式的实践。
+ *
  * @see java.lang.reflect.Proxy JDK动态代理
  */
 public class ProxyPattern {
@@ -43,7 +48,49 @@ public class ProxyPattern {
         Singer singer = new Singer();
         SingerProxy proxy = new SingerProxy(singer);
         proxy.sing();
+
+        /**
+         * 代理人承接演出
+         * 代理人布置演出场地
+         * 歌手唱歌
+         * 代理人结算演出费用
+         */
+
+        // 如果，代理目标方法较多使用静态代理较为麻烦，可以使用动态代理，下面是使用JDK实
+        // 现动态代理的方式，这种方式有一个要求，被代理的对象必须实现接口。
+
+        List list = (List) new DynamicProxy()
+                .proxy(new ArrayList());
+        list.add("data");
+        list.remove("data");
+        list.clear();
+        /**
+         * 前置代理，调用方法：add
+         * 后置代理，方法返回：true
+         * 前置代理，调用方法：remove
+         * 后置代理，方法返回：true
+         * 前置代理，调用方法：clear
+         * 后置代理，方法返回：null
+         */
+
+        // 当然除了JDK提供的方式外我们也可以使用CGLIB来使用动态代理，它不要求代理的对象
+        // 必须实现接口，这基于ASM字节码技术。
     }
+
+    static class DynamicProxy<T> {
+
+        public T proxy(T target) {
+
+            return (T) Proxy.newProxyInstance(Thread.currentThread().getContextClassLoader(),
+                    target.getClass().getInterfaces(), (proxy, method, args) -> {
+                        System.out.println("前置代理，调用方法：" + method.getName());
+                        Object result = method.invoke(target, args);
+                        System.out.println("后置代理，方法返回：" + result);
+                        return result;
+                    });
+        }
+    }
+
 
     /**
      * 总结：
@@ -52,5 +99,6 @@ public class ProxyPattern {
      * 道的操作都是和这个代理对象在交涉。代理对象可以在客户端和目标对象之间起到中介的作
      * 用，这样起到了的作用和保护了目标对象的，同时也在一定程度上面减少了系统的耦合度。
      */
+
 
 }
