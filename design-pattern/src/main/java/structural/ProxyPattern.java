@@ -64,6 +64,7 @@ public class ProxyPattern {
         list.add("data");
         list.remove("data");
         list.clear();
+
         /**
          * 前置代理，调用方法：add
          * 后置代理，方法返回：true
@@ -73,8 +74,8 @@ public class ProxyPattern {
          * 后置代理，方法返回：null
          */
 
-        // 当然除了JDK提供的方式外我们也可以使用CGLIB来使用动态代理，它不要求代理的对象
-        // 必须实现接口，这基于ASM字节码技术。
+        // 当然除了JDK 提供的方式外我们也可以使用 CGLIB 来使用动态代理，它不要求代理的对象
+        // 必须实现接口，这基于ASM 字节码技术。
     }
 
     static class DynamicProxy<T> {
