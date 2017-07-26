@@ -22,7 +22,8 @@ public class QueueLinkedImpl implements Queue {
         if (first == null) {
             first = last;
         } else {
-            oldLast.element = last;
+            //2017年7月26日17:28:33 原始链表尾的next指针指向新加的节点
+            oldLast.next = last;
         }
 
     }
