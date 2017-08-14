@@ -43,7 +43,7 @@ class WC {
             System.out.println(Thread.currentThread().getName() +" 使用完毕");
         } catch (InterruptedException e) {
             e.printStackTrace();
-        }finally{
+        } finally{
             //释放许可
             semaphore.release();
         }
