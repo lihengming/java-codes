@@ -41,10 +41,11 @@ class WC {
             System.out.println(Thread.currentThread().getName() +" 正在使用卫生间");
             TimeUnit.SECONDS.sleep(3);
             System.out.println(Thread.currentThread().getName() +" 使用完毕");
-            //释放许可
-            semaphore.release();
         } catch (InterruptedException e) {
             e.printStackTrace();
+        }finally{
+            //释放许可
+            semaphore.release();
         }
     }
 }

@@ -6,7 +6,7 @@ import java.util.concurrent.CountDownLatch;
  * Created by 李恒名 on 2017/6/18.
  */
 public class CountDownLatchTest {
-    static CountDownLatch latch = new CountDownLatch(3);//创建计数器并设置初始值为
+    static CountDownLatch latch = new CountDownLatch(3);//创建计数器并设置初始值为3
 
     static void work() {
         System.out.println(Thread.currentThread().getName() + " Work End");
