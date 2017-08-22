@@ -12,7 +12,11 @@ import java.net.Socket;
  */
 public class SimpleRpcFramework {
 
-
+    /**
+     * 暴漏服务
+     * @param service 服务的实现
+     * @param port 服务所处的端口号
+     */
     public static void export(Object service, int port) {
         System.out.println("Export service " + service.getClass().getSimpleName() + " success on port " + port);
         try {
@@ -38,9 +42,17 @@ public class SimpleRpcFramework {
         }
     }
 
-    public static <T> T use(Class<T> interfaceClass, String host, int port) {
-        System.out.println(String.format("Use remote service [%s] from [%s:%s]", interfaceClass.getSimpleName(), host, port));
-        return (T) Proxy.newProxyInstance(interfaceClass.getClassLoader(), new Class<?>[]{interfaceClass}, (proxy, method, args) -> {
+    /**
+     * 使用服务
+     * @param serviceInterface 要使用的服务的接口
+     * @param host 服务所处的主机名称
+     * @param port 服务所处的端口号
+     * @param <T>
+     * @return 服务
+     */
+    public static <T> T use(Class<T> serviceInterface, String host, int port) {
+        System.out.println(String.format("Use remote service [%s] from [%s:%s]", serviceInterface.getSimpleName(), host, port));
+        return (T) Proxy.newProxyInstance(serviceInterface.getClassLoader(), new Class<?>[]{serviceInterface}, (proxy, method, args) -> {
             try (Socket socket = new Socket(host, port)) {
                 try (ObjectOutputStream out = new ObjectOutputStream(socket.getOutputStream())) {
                     out.writeUTF(method.getName());
