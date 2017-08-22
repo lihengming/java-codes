@@ -18,7 +18,6 @@ public class SimpleRpcFramework {
      * @param port 服务所处的端口号
      */
     public static void export(Object serviceImpl, int port) {
-        System.out.println("Export service " + serviceImpl.getClass().getSimpleName() + " success on port " + port);
         try {
             try (ServerSocket server = new ServerSocket(port)) {
                 while (!Thread.currentThread().isInterrupted()) {
@@ -38,8 +37,9 @@ public class SimpleRpcFramework {
                 }
             }
         } catch (Exception e) {
-            e.printStackTrace();
+            throw new RuntimeException("Export service fail .", e);
         }
+        System.out.println("Export service " + serviceImpl.getClass().getSimpleName() + " success on port " + port);
     }
 
     /**
