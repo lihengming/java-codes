@@ -14,19 +14,19 @@ public class SimpleRpcFramework {
 
     /**
      * 暴漏服务
-     * @param service 服务的实现
+     * @param serviceImpl 服务的实现
      * @param port 服务所处的端口号
      */
-    public static void export(Object service, int port) {
-        System.out.println("Export service " + service.getClass().getSimpleName() + " success on port " + port);
+    public static void export(Object serviceImpl, int port) {
+        System.out.println("Export service " + serviceImpl.getClass().getSimpleName() + " success on port " + port);
         try {
             try (ServerSocket server = new ServerSocket(port)) {
                 while (!Thread.currentThread().isInterrupted()) {
                     Socket socket = server.accept();
                     new Thread(() -> {
                         try (ObjectInputStream in = new ObjectInputStream(socket.getInputStream())) {
-                            Method method = service.getClass().getMethod(in.readUTF(), (Class<?>[]) in.readObject());
-                            Object result = method.invoke(service, (Object[]) in.readObject());
+                            Method method = serviceImpl.getClass().getMethod(in.readUTF(), (Class<?>[]) in.readObject());
+                            Object result = method.invoke(serviceImpl, (Object[]) in.readObject());
                             try (ObjectOutputStream out = new ObjectOutputStream(socket.getOutputStream())) {
                                 out.writeObject(result);
                             }
