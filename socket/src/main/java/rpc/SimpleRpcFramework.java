@@ -32,7 +32,7 @@ public class SimpleRpcFramework {
                             }
                             System.out.println("Invoke method [" + method.getName() + "()] success, form " + socket.getRemoteSocketAddress());
                         } catch (Exception e) {
-                            e.printStackTrace();
+                            throw new RuntimeException("Export service fail .", e);
                         }
                     }).start();
                 }
