@@ -59,32 +59,31 @@ public class ProxyPattern {
         // 如果，代理目标方法较多使用静态代理较为麻烦，可以使用动态代理，下面是使用JDK实
         // 现动态代理的方式，这种方式有一个要求，被代理的对象必须实现接口。
 
-        List list = (List) new DynamicProxy()
-                .proxy(new ArrayList());
+        List list = DynamicProxy.proxy(new ArrayList());
         list.add("data");
+        list.size();
         list.remove("data");
-        list.clear();
 
         /**
-         * 前置代理，调用方法：add
+         * 前置代理，调用方法：add()
          * 后置代理，方法返回：true
-         * 前置代理，调用方法：remove
+         * 前置代理，调用方法：size()
+         * 后置代理，方法返回：1
+         * 前置代理，调用方法：remove()
          * 后置代理，方法返回：true
-         * 前置代理，调用方法：clear
-         * 后置代理，方法返回：null
          */
 
         // 当然除了JDK 提供的方式外我们也可以使用 CGLIB 来使用动态代理，它不要求代理的对象
         // 必须实现接口，这基于ASM 字节码技术。
     }
 
-    static class DynamicProxy<T> {
+    private static class DynamicProxy {
 
-        public T proxy(T target) {
+        public static <T> T proxy(T target) {
 
             return (T) Proxy.newProxyInstance(Thread.currentThread().getContextClassLoader(),
                     target.getClass().getInterfaces(), (proxy, method, args) -> {
-                        System.out.println("前置代理，调用方法：" + method.getName());
+                        System.out.println("前置代理，调用方法：" + method.getName()+"()");
                         Object result = method.invoke(target, args);
                         System.out.println("后置代理，方法返回：" + result);
                         return result;
