@@ -41,5 +41,17 @@ public class DeadlockTest {
 
             }
         }, "Thread 2").start();
+
+        /**
+         > jstack [pid]
+
+         "Thread 2":
+         waiting to lock monitor 0x0000000002cc7338 (object 0x000000076b7b31d8, a java.lang.Object),
+         which is held by "Thread 1"
+         "Thread 1":
+         waiting to lock monitor 0x0000000002cc9bc8 (object 0x000000076b7b31e8, a java.lang.Object),
+         which is held by "Thread 2"
+
+         */
     }
 }
