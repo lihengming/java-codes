@@ -47,7 +47,6 @@ public class SimpleRpcFramework {
      * @param serviceInterface 要使用的服务的接口
      * @param host 服务所处的主机名称
      * @param port 服务所处的端口号
-     * @param <T>
      * @return 服务
      */
     public static <T> T use(Class<T> serviceInterface, String host, int port) {
