@@ -23,11 +23,10 @@ public class CustomClassLoader extends ClassLoader {
     @Override
     protected Class<?> findClass(String name) throws ClassNotFoundException {
         String fileName = name;
-        if (fileName.indexOf('.') > 0) {
-            fileName.replaceAll(".", "\\");
+        if (fileName.indexOf('.') != -1) {
+            fileName = fileName.replaceAll("\\.", "\\\\");
         }
         fileName = fileName + ".class";
-
         try {
             try (FileInputStream in = new FileInputStream(classesDir + fileName)) {
                 try (ByteArrayOutputStream out = new ByteArrayOutputStream()) {
@@ -40,11 +39,9 @@ public class CustomClassLoader extends ClassLoader {
                     return defineClass(name, data, 0, data.length);
                 }
             }
-
         } catch (IOException e) {
-            e.printStackTrace();
+            throw new ClassNotFoundException(name);
         }
-        return super.findClass(name);
     }
 
     public static void main(String[] args) throws ReflectiveOperationException{
