@@ -11,11 +11,6 @@ import java.lang.reflect.Method;
 public class CustomClassLoader extends ClassLoader {
     private final String classesDir;
 
-    @Override
-    public Class<?> loadClass(String name) throws ClassNotFoundException {
-        return super.loadClass(name,true);
-    }
-
     public CustomClassLoader(String classesDir) {
         this.classesDir = classesDir;
     }
