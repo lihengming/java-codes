@@ -31,7 +31,7 @@
         - [适配器模式（Adapter）](https://github.com/lihengming/java-codes/blob/master/design-pattern/src/main/java/structural/AdapterPattern.java)
         - [代理模式（Proxy）](https://github.com/lihengming/java-codes/blob/master/design-pattern/src/main/java/structural/ProxyPattern.java)
         - [装饰模式（Decorator）](https://github.com/lihengming/java-codes/blob/master/design-pattern/src/main/java/structural/DecoratorPattern.java)
-        - 桥接模式（Bridge）
+        - [桥接模式（Bridge）](https://github.com/lihengming/java-codes/blob/master/design-pattern/src/main/java/structural/BridgePattern.java)
         - 组合模式（Composite）
         - 享元模式（Flyweight）
     - [行为型模式（Behavioral）](https://github.com/lihengming/java-codes/tree/master/design-pattern/src/main/java/behavioral)
